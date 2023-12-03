@@ -3,14 +3,16 @@
 
 *{
     
+    
+}
+.bd{
+    scroll-behavior: smooth;
+    background-color: gray;
     padding: 0;
     margin: 0;
-    background-color: gray;
     box-sizing: border-box;
     color: white;
-}
-body{
-    scroll-behavior: smooth;
+
 }
 header{
     display: flex;
@@ -21,9 +23,10 @@ header{
    
 }
 
-a{
+.aa{
     text-decoration: none;
     margin-left: 10px;
+    color: white;
 }
 .navBar a:hover,
 .navBar a.Active{
@@ -39,12 +42,12 @@ a{
 .Home{
     margin-top: 40px;
     display: flex;
-    padding: 10px  40px;
+    padding: 10px  60px;
     overflow: hidden;
 }
 #homeImg{
-    height: 300px;
-    width: 280px;
+    height: 400px;
+    width: 380px;
     overflow: hidden;
     background-color: rgb(63, 122, 231);
 
@@ -52,4 +55,35 @@ a{
 .hi{
     display: flex;
     align-items: center;
+}
+.Education{
+    
+    overflow: hidden;
+
+}
+#ED{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.edu{
+    margin-top: 40px;
+   
+    padding: 10px  60px;
+    display: flex;
+    margin: 10px;
+   justify-content: space-between;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+.institution h3,
+.institution h5{
+    margin: 10px;
+}
+.institution{
+    background-color: blueviolet;
+    padding: 10px;
 }
