@@ -45,11 +45,15 @@ header{
     padding: 10px  60px;
     overflow: hidden;
 }
+.colorr{
+    color: greenyellow;
+
+}
 #homeImg{
     height: 400px;
     width: 380px;
     overflow: hidden;
-    background-color: rgb(63, 122, 231);
+    
 
 }
 .hi{
@@ -60,6 +64,11 @@ header{
     
     overflow: hidden;
 
+    margin-top: 40px;
+    
+    padding: 10px  60px;
+    overflow: hidden;
+
 }
 #ED{
     text-align: center;
@@ -68,10 +77,11 @@ header{
 .edu{
     margin-top: 40px;
    
-    padding: 10px  60px;
+    
     display: flex;
-    margin: 10px;
-   justify-content: space-between;
+    
+    justify-content: space-between;
+    width: 100%;
 }
 
 .date{
@@ -84,6 +94,8 @@ header{
     margin: 10px;
 }
 .institution{
-    background-color: blueviolet;
+    
     padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
 }
