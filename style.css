@@ -118,13 +118,23 @@ header{
 }
 
 .sizze{
-    height: 500px;
+   
+   
 }
 .acl{
     text-decoration: none;
     color: white;
     font-weight: 650;
     background-color: rgb(10, 231, 39);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.ccl{
+    text-decoration: none;
+    color: white;
+    font-weight: 650;
+    background-color: rgb(215, 127, 226);
     border: 1px solid white;
     border-radius: 10px;
     padding: 5px;
@@ -141,3 +151,8 @@ header{
     color: white;
     
 }
+
+/* .card-body{
+    width: 450px;
+    height: 200px;
+} */
