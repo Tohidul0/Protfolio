@@ -452,33 +452,37 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-          const textElement = document.getElementById('animated-text');
-          const text = textElement.innerHTML;
-          let charIndex = 0;
-  
-          textElement.innerHTML = ''; // Clear the content initially
-  
-          function typeChar() {
-              if (charIndex < text.length) {
-                  textElement.innerHTML += text[charIndex];
-                  charIndex++;
-                  setTimeout(typeChar, 100); // Adjust speed here (in milliseconds)
-              } else {
-                  charIndex = 0; // Reset the index to 0 for the next time the animation triggers
-              }
-          }
-  
-          const observer = new IntersectionObserver(entries => {
-              entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                      textElement.innerHTML = ''; // Clear the content when the element comes into view
-                      typeChar(); // Start the typing animation
-                  }
-              });
-          });
-  
-          observer.observe(textElement);
-      });
+    const textElement = document.getElementById('animated-text');
+    const text = textElement.innerHTML;
+    let charIndex = 0;
+    let isAnimating = false;
+
+    textElement.innerHTML = ''; // Clear the content initially
+
+    function typeChar() {
+        if (charIndex < text.length) {
+            textElement.innerHTML += text[charIndex];
+            charIndex++;
+            setTimeout(typeChar, 100); // Adjust speed here (in milliseconds)
+        } else {
+            isAnimating = false; // Animation completed, reset the flag
+        }
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !isAnimating) {
+                isAnimating = true; // Set the flag to indicate animation is running
+                charIndex = 0; // Reset the index to 0
+                textElement.innerHTML = ''; // Clear the content when the element comes into view
+                typeChar(); // Start the typing animation
+            }
+        });
+    });
+
+    observer.observe(textElement);
+});
+
 
 
 
