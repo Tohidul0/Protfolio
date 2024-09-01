@@ -10,7 +10,7 @@
     background-color:rgb(41, 37, 70);
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+   
     color: white;
 
 }
@@ -189,5 +189,26 @@ header{
     }
     to {
         transform: translateX(-50%);
+    }
+}
+@media (max-width: 768px) {
+    #homeImg {
+        height: 340px;
+        width: 330px;
+        overflow: hidden;
+        border: 1px solid rgb(196, 103, 103);
+        border-radius: 10px;
+        border-spacing: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    #homeImg {
+        height: 270px;
+        width: 260px;
+        overflow: hidden;
+        border: 1px solid rgb(196, 103, 103);
+        border-radius: 10px;
+        border-spacing: 0;
     }
 }
