@@ -36,8 +36,8 @@
     <section class="Home row" id="Home">
         <div class="hi col-lg-6 col-md-9">
             <div class="content">
-                <h1>Hi!!<br> <span class="colorr">I am Mohammad Tohidul Alam</span></h1>
-            <p>CSE graduate with a passion for web development and competitive programming.Always eager to learn and explore new technologies.</p>
+                <h1>Hi!!<br> <span class="colorr" id="animated-text">I am Mohammad Tohidul Alam</span></h1>
+            <p>Passionate CSE graduate with a love for web development and competitive programming. Thriving as a Software Engineer, I've gained practical experience in front-end design, API integration, and team collaboration. Eager to learn, grow, and explore new technologies to drive innovation.</p>
             <p><box-icon type='solid' name='phone-call'></box-icon> +8801947334516</p>
             <p><box-icon name='mail-send'></box-icon> : tohidulalam967418@gmail.com</p>
           
@@ -310,5 +310,38 @@
     </section>
 
     
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const textElement = document.getElementById('animated-text');
+          const text = textElement.innerHTML;
+          let charIndex = 0;
+  
+          textElement.innerHTML = ''; // Clear the content initially
+  
+          function typeChar() {
+              if (charIndex < text.length) {
+                  textElement.innerHTML += text[charIndex];
+                  charIndex++;
+                  setTimeout(typeChar, 100); // Adjust speed here (in milliseconds)
+              } else {
+                  charIndex = 0; // Reset the index to 0 for the next time the animation triggers
+              }
+          }
+  
+          const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      textElement.innerHTML = ''; // Clear the content when the element comes into view
+                      typeChar(); // Start the typing animation
+                  }
+              });
+          });
+  
+          observer.observe(textElement);
+      });
+  </script>
+  
 </body>
 </html>
