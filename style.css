@@ -156,3 +156,40 @@ header{
     width: 450px;
     height: 200px;
 } */
+
+/* Basic styling for the container */
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+/* Styling for the content to scroll */
+.scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite; /* Adjust duration as needed */
+}
+
+/* Styling for each skill image */
+.timg {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between images */
+    text-align: center;
+}
+
+.scroll-content img {
+    height: 50px; /* Adjust image size as needed */
+    vertical-align: middle;
+}
+
+/* Animation keyframes */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
