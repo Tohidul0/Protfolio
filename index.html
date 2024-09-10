@@ -23,14 +23,31 @@
         <box-icon id="box-icon" name='menu'></box-icon>
 
         <!-- nav section start here ----------->
-        <nav class="navBar">
+        <!-- <nav class="navBar">
             <a class="aa" href="#Home" class="Active">Home</a>
             <a class="aa" href="#About">About</a>
             <a class="aa" href="#Education">Education</a>
             <a class="aa" href="#TeckStack">TechStack</a>
             <a class="aa" href="#Project">Project</a>
             <a class="aa" href="#Contact">Contact</a>
-        </nav>
+        </nav> -->
+
+
+        <nav class="navBar">
+          <ul class="navLinks" id="navLinks">
+              <li><a href="#Home" class="Active">Home</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Education">Education</a></li>
+              <li><a href="#TechStack">TechStack</a></li>
+              <li><a href="#Project">Project</a></li>
+              <li><a href="#Contact">Contact</a></li>
+          </ul>
+          <div class="burger" id="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+      </nav>
     </header>
     <!-- home section start here----- -->
     <section class="Home row" id="Home">
@@ -516,6 +533,17 @@
 
     // Initialize button states
     updateButtons();
+});
+
+
+
+
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
 });
 
   </script>
