@@ -203,10 +203,14 @@ header{
     
         padding: 2px;
         margin-top: 40px;
-        
-        
-       
-    
+   
+    }
+    .Home{
+        margin-top: 40px;
+        display: flex;
+        padding: 2px  60px;
+        overflow: hidden;
+        padding-top: 80px;
     }
 }
 
@@ -225,10 +229,13 @@ header{
     
         padding: 2px;
         margin-top: 40px;
-        
-        
-       
-    
+    }
+    .Home{
+        margin-top: 40px;
+        display: flex;
+        padding: 2px  60px;
+        overflow: hidden;
+        padding-top: 80px;
     }
 }
 
