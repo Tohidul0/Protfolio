@@ -376,17 +376,37 @@ body {
 
 .experience-card {
     border-radius: 15px;
-    background-color: #47406F; /* Fancy color background */
+    background-color: #47406F;
     transition: all 0.4s ease-in-out;
     position: relative;
     overflow: hidden;
     border: none;
     z-index: 0;
+    padding: 10px; /* Minimal padding */
+    height: auto;  /* Flexible height */
+}
+
+.experience-card p, .experience-card ul {
+    margin-bottom: 0.2rem; /* Reduced spacing between elements */
+    line-height: 1.1; /* Tight line spacing */
+}
+
+.experience-card h5, .experience-card p, .experience-card span {
+    color: #E4E4EB;
+    margin-bottom: 0.2rem; /* Tight margin between title and content */
+}
+
+.experience-card .d-flex {
+    margin-bottom: 0.3rem; /* Minimal spacing between title and icon */
+}
+
+.experience-card ul.custom-list li {
+    margin-bottom: 0.2rem; /* Tight spacing between list items */
 }
 
 .experience-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     z-index: 0;
 }
 
@@ -406,20 +426,16 @@ body {
     left: 100%;
 }
 
-.experience-card h5, .experience-card p, .experience-card span {
-    color: #E4E4EB; /* Light color for text */
-}
-
 .btn-custom {
     color: #f11010;
-    background-color: #d9e6e2; /* Custom fancy button color */
+    background-color: #d9e6e2;
     border: none;
     transition: background-color 0.3s ease;
     z-index: 1;
+    margin-top: 5px; /* Minimal margin between button and content */
 }
 
 .btn-custom:hover {
     background-color: #50C6A5;
     color: white;
 }
-
