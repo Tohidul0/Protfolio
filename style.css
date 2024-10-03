@@ -333,3 +333,93 @@ header{
         display: flex;
     }
 }
+
+
+
+.experience, .education {
+    display: flex;
+    
+   
+   
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+.experienceInfo {
+    flex: 1;
+    color: #fff;
+}
+
+.experience1, .experience2 {
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 40%;
+    padding: 2%;
+   
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+
+
+
+
+body {
+    background-color: #292546;
+}
+
+.experience-card {
+    border-radius: 15px;
+    background-color: #47406F; /* Fancy color background */
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    z-index: 0;
+}
+
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+    z-index: 0;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.experience-card:hover::before {
+    left: 100%;
+}
+
+.experience-card h5, .experience-card p, .experience-card span {
+    color: #E4E4EB; /* Light color for text */
+}
+
+.btn-custom {
+    color: #f11010;
+    background-color: #d9e6e2; /* Custom fancy button color */
+    border: none;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.btn-custom:hover {
+    background-color: #50C6A5;
+    color: white;
+}
+
